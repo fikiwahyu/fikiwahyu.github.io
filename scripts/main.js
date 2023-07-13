@@ -575,7 +575,7 @@
     data() {
       return {
         // the date my career started (change to yours)
-        careerStartDate: 2000,
+        careerStartDate: 2020,
         // the date copyright started (change to yours)
         copyrightStartDate: 2020,
         // for the template theme
