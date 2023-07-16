@@ -1038,7 +1038,7 @@
             },
           },
         ],
-        instagramPost: 15,
+        fakeUsers: 15,
       };
     },
 
@@ -1078,13 +1078,13 @@
         autoplayVideos: false,
       }); // initialize the first displayed type of skills
       this.initSkillsFirstType();
-      this.getInstagramPost();
+      this.getFakeUser();
     },
 
     methods: {
       getInstagramPost() {
         fetch(
-          "https://graph.instagram.com/me/media?fields=id,media_type,caption,media_url&access_token=IGQVJYZAnp3SjlKMUg2MDVtdkdwQ0l1OXd5a2ZABbjRpczl2NGU5YjVySUo4VXdpZA0g5cGVoRHBsbFhkOEZAheV9rSmlPSkt5M0ZAWS29KZATZAJTzhtX24wSlp3a0FjRGRaYkdaaDROLTFwRnlUMElVRFRDMQZDZD"
+          "https://graph.instagram.com/me/media?fields=id,media_type,caption,media_url&access_token=IGQVJVSVZArM3NiT1ktelFkZAUp5eVZAyeXpnb3c0Mi1zSG5yTlc3ZAXo3N1NJTW1MZAzEyeVNXbUlQVnhsZA1piaG1zd2l3U0tqa2hyRTlwaDFXaEZAid3ZATVzNjaDJlcXF2cmwzNjBfczNNMlh2U1BQQmhoSQZDZD"
         )
           .then((response) => response.json())
           .then((response) => {
@@ -1104,8 +1104,8 @@
                   caption: e.caption,
                 });
               }
-              console.log(instaPost);
             });
+            console.log(instaPost);
             postItems.forEach((e, i) => {
               if (instaPost[i].media_type == "VIDEO") {
                 e.querySelector(".instagram-pict").src =
@@ -1118,6 +1118,41 @@
               e.querySelector(".instagram-title").textContent = instaPost[i].id;
               e.querySelector(".instagram-title").textContent =
                 instaPost[i].media_type;
+            });
+          });
+      },
+
+      getFakeUser() {
+        let fakeUsers;
+        const params = new URLSearchParams({
+          results: this.fakeUsers,
+        });
+        const url = "https://randomuser.me/api/?" + params;
+        const options = {
+          method: "GET",
+          headers: {
+            "X-RapidAPI-Key":
+              "3e2981fc31msh31c09f2cb426574p19b6f6jsnd66d0d5153d9",
+            "X-RapidAPI-Host": "fake-users6.p.rapidapi.com",
+          },
+        };
+        fetch(url, options)
+          .then((response) => response.json())
+          .then((data) => {
+            let postItem = document.querySelectorAll(".fakeuser-post-item");
+            fakeUsers = data.results;
+
+            fakeUsers.forEach((e, i) => {
+              // this is the section to get the element of fake users
+              postItem[i].querySelector(".fakeuser-pict").src = e.picture.large;
+              postItem[i].querySelector(
+                ".fakeuser-title"
+              ).innerHTML = `${e.name.title}. ${e.name.first} ${e.name.last}`;
+              postItem[i].querySelector(".fakeuser-subtitle").innerHTML =
+                e.email;
+              postItem[i].querySelector(
+                ".fakeuser-caption"
+              ).innerHTML = `${e.location.street.number},${e.location.street.name} </br> ${e.location.city} ${e.location.state} ${e.location.country} ${e.location.postcode}`;
             });
           });
       },

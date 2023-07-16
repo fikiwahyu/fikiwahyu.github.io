@@ -638,39 +638,39 @@
                 No worries...
               </h2>
               <p>
-                This section is connected to instagram api to get the post from
-                my personal instagram
+                This section is connected to thir party api to get the result
+                from the api's database
               </p>
             </div>
           </div>
 
           <div class="section-content container">
             <ul
-              class="testimonials-items instagram-post-items"
+              class="testimonials-items fakeuser-post-items"
               v-staggerdelay="500"
             >
               <li
                 class="has-ultimate-tooltip"
                 tabindex="0"
-                v-for="item in instagramPost"
-                :key="item.id"
+                v-for="item in fakeUsers"
+                :key="item"
               >
-                <div class="testimonials-item instagram-post-item">
+                <div class="testimonials-item fakeuser-post-item">
                   <div class="testimonial-author-img">
                     <img
-                      class="instagram-pict"
+                      class="fakeuser-pict"
                       :src="'assets/images/testimonials/anonymous-user.png'"
-                      :alt="item.id"
+                      :alt="item"
                     />
                   </div>
                   <div class="ultimate-tooltip">
-                    <p class="instagram-caption">
-                      This is connected to instagram
+                    <p class="fakeuser-caption">
+                      This is connected to FakeUSers API
                     </p>
-                    <h4 class="ultimate-tooltip-title instagram-title">
+                    <h4 class="ultimate-tooltip-title fakeuser-title">
                       {{ item.id }}
                     </h4>
-                    <h5 class="ultimate-tooltip-subtitle instagram-subtitle">
+                    <h5 class="ultimate-tooltip-subtitle fakeuser-subtitle">
                       {{ item.media_type }}
                     </h5>
                   </div>
