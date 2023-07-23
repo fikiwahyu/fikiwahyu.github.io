@@ -679,6 +679,14 @@
             title: "Git (Github)",
           },
           {
+            imgUrl: "assets/images/logo/codeigniter.png",
+            title: "CodeIgniter",
+          },
+          {
+            imgUrl: "assets/images/logo/laravel.png",
+            title: "Laravel",
+          },
+          {
             imgUrl: "assets/images/logo/composer.png",
             title: "Composer",
           },
@@ -785,54 +793,31 @@
             id: 1,
             url: "single-portfolio.html?id=1",
             imgUrl: "assets/portofolio-1.jpeg",
-            title: {
-              en: "LNG Academy Official Landing Page",
-              id: "LNG Academy Official Landing Page",
-            },
-            date: {
-              en: "2021",
-              id: "2021",
-            },
-            desc: {
-              en: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-              id: "unavailable",
-            },
+            title: "LNG Academy Official Landing Page",
+            date: 2021,
+            desc: "The LNG Academy website development project, this project aims to create a user-friendly and comprehensive online official website for a LNG Academy. With meticulous attention to detail and a clear vision, my team and I are working on designing and building a cutting-edge website that meets the needs of presenting our annual event. this website developed by using weebly website builder",
             category: "HTML",
-            tools: ["HTML", "CSS", "SCSS", "JavaScript", "Bootstrap", "AJAX"],
+            tools: ["HTML", "CSS", "JavaScript", "Weebly"],
             screenshots: {
               img1: {
-                url: "https://via.placeholder.com/355x200",
+                url: "assets/portofolio/portofolio1-1.png",
                 caption: {
-                  en: "caption 5",
-                  id: "caption 5",
+                  en: "Welcome Section",
+                  id: "Welcome Section",
                 },
               },
               img2: {
-                url: "https://via.placeholder.com/330x460",
+                url: "assets/portofolio/portofolio1-2.png",
                 caption: {
-                  en: "caption 4",
-                  ar: "تسمية توضيحية 4",
+                  en: "About Us Section",
+                  id: "About Us Section",
                 },
               },
               img3: {
-                url: "https://via.placeholder.com/300x225",
+                url: "assets/portofolio/portofolio1-3.png",
                 caption: {
-                  en: "caption 3",
-                  ar: "تسمية توضيحية 3",
-                },
-              },
-              img4: {
-                url: "https://via.placeholder.com/300x225",
-                caption: {
-                  en: "caption 2",
-                  ar: "تسمية توضيحية 2",
-                },
-              },
-              img5: {
-                url: "https://via.placeholder.com/300x225",
-                caption: {
-                  en: "caption 1",
-                  ar: "تسمية توضيحية 1",
+                  en: "Blog Section",
+                  id: "Blog Section",
                 },
               },
             },
@@ -841,54 +826,31 @@
             id: 2,
             url: "single-portfolio.html?id=2",
             imgUrl: "assets/portofolio-2.jpeg",
-            title: {
-              en: "Fikipedia.id",
-              id: "Fikipedia.id",
-            },
-            date: {
-              en: "2021",
-              id: "2021",
-            },
-            desc: {
-              en: "Fikipedia.id is a simple blog that using a blogger framework. this website was made since march 2020 when it was Covid for the first time. in that time, i think many people have a spare time while doing quarantine..",
-              id: "unavailable",
-            },
+            title: "Fikipedia.id",
+            date: "2021",
+            desc: "Fikipedia.id is a simple blog that using a blogger framework. this website was made since march 2020 when it was Covid for the first time. in that time, i think many people have a spare time while doing quarantine..",
             category: "Blogger",
             tools: ["HTML", "CSS", "JavaScript", "XML"],
             screenshots: {
               img1: {
-                url: "https://via.placeholder.com/355x200",
+                url: "assets/portofolio/portofolio2-1.png",
                 caption: {
-                  en: "caption 5",
-                  ar: "تسمية توضيحية 5",
+                  en: "Homepage of Fikipedia",
+                  id: "Halaman Awal Fikipedia",
                 },
               },
               img2: {
-                url: "https://via.placeholder.com/330x460",
+                url: "assets/portofolio/portofolio2-2.png",
                 caption: {
-                  en: "caption 4",
-                  ar: "تسمية توضيحية 4",
+                  en: "About Fikipedia",
+                  id: "Tentang Fikipedia",
                 },
               },
               img3: {
-                url: "https://via.placeholder.com/300x225",
+                url: "assets/portofolio/portofolio2-3.png",
                 caption: {
-                  en: "caption 3",
-                  ar: "تسمية توضيحية 3",
-                },
-              },
-              img4: {
-                url: "https://via.placeholder.com/300x225",
-                caption: {
-                  en: "caption 2",
-                  ar: "تسمية توضيحية 2",
-                },
-              },
-              img5: {
-                url: "https://via.placeholder.com/300x225",
-                caption: {
-                  en: "caption 1",
-                  ar: "تسمية توضيحية 1",
+                  en: "Quiz Web Application",
+                  id: "Quiz Web Application",
                 },
               },
             },
@@ -897,54 +859,45 @@
             id: 3,
             url: "single-portfolio.html?id=3",
             imgUrl: "assets/portofolio-3.jpeg",
-            title: {
-              en: "Coverbook.id",
-              id: "Coverbook.id",
-            },
-            date: {
-              en: "2021",
-              id: "2021",
-            },
-            desc: {
-              en: "Coverbook.id is an educational platform that prepare a tryout for UTBK and College selection Test. We also prepare a function that can analyze our student's progress. coverbook.id has been applied the latest scoring system for our tryout..",
-              id: "Unavailable",
-            },
+            title: "Coverbook.id",
+            date: 2021,
+            desc: "Coverbook.id is an educational platform that prepare a tryout for UTBK and College selection Test. We also prepare a function that can analyze our student's progress. coverbook.id has been applied the latest scoring system for our tryout..",
             category: "PHP",
             tools: ["HTML", "CSS", "SCSS", "JavaScript", "PHP", "Codeigniter"],
             screenshots: {
               img1: {
-                url: "https://via.placeholder.com/355x200",
+                url: "assets/portofolio/portofolio3-1.png",
                 caption: {
-                  en: "caption 5",
-                  ar: "تسمية توضيحية 5",
+                  en: "Auth Page of Coverbook",
+                  id: "Halaman autentifikasi ",
                 },
               },
               img2: {
-                url: "https://via.placeholder.com/330x460",
+                url: "assets/portofolio/portofolio3-2.png",
                 caption: {
-                  en: "caption 4",
-                  ar: "تسمية توضيحية 4",
+                  en: "Profile Page",
+                  id: "Halaman Profil",
                 },
               },
               img3: {
                 url: "https://via.placeholder.com/300x225",
                 caption: {
                   en: "caption 3",
-                  ar: "تسمية توضيحية 3",
+                  id: "تسمية توضيحية 3",
                 },
               },
               img4: {
                 url: "https://via.placeholder.com/300x225",
                 caption: {
                   en: "caption 2",
-                  ar: "تسمية توضيحية 2",
+                  id: "تسمية توضيحية 2",
                 },
               },
               img5: {
                 url: "https://via.placeholder.com/300x225",
                 caption: {
                   en: "caption 1",
-                  ar: "تسمية توضيحية 1",
+                  id: "تسمية توضيحية 1",
                 },
               },
             },
@@ -953,17 +906,9 @@
             id: 4,
             url: "single-portfolio.html?id=4",
             imgUrl: "assets/portofolio-4.jpeg",
-            title: {
-              en: "Nextdev submission Project",
-              id: "Nectdev Submission Project",
-            },
-            date: {
-              en: "2021",
-              id: "2021",
-            },
-            desc: {
-              en: "Nextdev Digitalent Academy is a selected bootcamp presented by Telkomsel. in the end of the bootcamp, we have to make the portofolio based on what we learnt on the bootcamp including web development Program and Applying Our Machine Learning to the website we built. At the culmination of the NextDev Digitalent Academy bootcamp, participants are required to showcase their acquired skills and knowledge by creating a comprehensive portfolio. This portfolio serves as a testament to the extensive training received during the bootcamp, with a focus on web development programs and the practical application of machine learning concepts to the websites developed.",
-            },
+            title: "Nextdev submission Project",
+            date: 2021,
+            desc: "Nextdev Digitalent Academy is a selected bootcamp presented by Telkomsel. in the end of the bootcamp, we have to make the portofolio based on what we learnt on the bootcamp including web development Program and Applying Our Machine Learning to the website we built. At the culmination of the NextDev Digitalent Academy bootcamp, participants are required to showcase their acquired skills and knowledge by creating a comprehensive portfolio. This portfolio serves as a testament to the extensive training received during the bootcamp, with a focus on web development programs and the practical application of machine learning concepts to the websites developed.",
             category: "HTML",
             tools: [
               "HTML",
@@ -980,38 +925,38 @@
             ],
             screenshots: {
               img1: {
-                url: "https://via.placeholder.com/355x200",
+                url: "/assets/portofolio/portofolio4-1.png",
                 caption: {
-                  en: "caption 5",
-                  ar: "تسمية توضيحية 5",
+                  en: "Home Page Project",
+                  id: "Halaman awal",
                 },
               },
               img2: {
-                url: "https://via.placeholder.com/330x460",
+                url: "/assets/portofolio/portofolio4-2.png",
                 caption: {
-                  en: "caption 4",
-                  ar: "تسمية توضيحية 4",
+                  en: "Assignment 1 - Basic HTML",
+                  id: "HTML Dasar",
                 },
               },
               img3: {
-                url: "https://via.placeholder.com/300x225",
+                url: "/assets/portofolio/portofolio4-3.png",
                 caption: {
-                  en: "caption 3",
-                  ar: "تسمية توضيحية 3",
+                  en: "Assignment 2 - DOM Javascript",
+                  id: "DOM Javascript",
                 },
               },
               img4: {
-                url: "https://via.placeholder.com/300x225",
+                url: "/assets/portofolio/portofolio4-4.png",
                 caption: {
-                  en: "caption 2",
-                  ar: "تسمية توضيحية 2",
+                  en: "Assignment 3 - Thirdparty API",
+                  id: "API pihak ketiga",
                 },
               },
               img5: {
-                url: "https://via.placeholder.com/300x225",
+                url: "/assets/portofolio/portofolio4-5.png",
                 caption: {
-                  en: "caption 1",
-                  ar: "تسمية توضيحية 1",
+                  en: "Data Analysis using Python",
+                  id: "Data Analis Python",
                 },
               },
             },
@@ -1026,15 +971,15 @@
               "https://scontent.cdninstagram.com/v/t51.29350-15/338917272_787949175664087_4910179001510614985_n.webp?stp=dst-jpg&_nc_cat=100&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=Cl_fUX6bD8kAX_qFt9a&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfAzWqQrXJ5elc5AJzad9P-LI2A4U2fS1hq-Anzn3PTx5g&oe=64AD7686",
             quoteContent: {
               en: "Nafie simply provides amazing web development service. Their team is extremely professional and the easiest to meet I have ever worked with. I would recommend Nafie to anyone.",
-              ar: "محمد يقدم خدمات مذهلة في تطوير الويب، ولديه فريق محترف يجعل التعامل معهم مطمئن للغاية. أوصي بفريقهم للجميع.",
+              id: "محمد يقدم خدمات مذهلة في تطوير الويب، ولديه فريق محترف يجعل التعامل معهم مطمئن للغاية. أوصي بفريقهم للجميع.",
             },
             quoteAuthor: {
               en: "Terrell Grimes",
-              ar: "جابر العواني",
+              id: "جابر العواني",
             },
             jobTitle: {
               en: "Photographer",
-              ar: "مصور فوتوغرافي",
+              id: "مصور فوتوغرافي",
             },
           },
         ],
