@@ -27,6 +27,12 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto&family=Saira+Stencil+One&text=Nafie&display=swap"
     />
 
+    <!-- Google material icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
     <!-- css libraries file -->
     <link rel="stylesheet" href="styles/libraries.min.css" />
 
@@ -689,55 +695,135 @@
         </div>
         <!-- end of testimonials section -->
 
-        <!-- start of testimonials section -->
-        <!-- <div
-          id="testimonials"
-          class="testimonials-section section"
-          tabindex="-1"
-          ref="testimonialsSection"
-        >
+        <!-- Start of weather section -->
+        <div class="weather-section section">
           <div class="container">
-            <div class="section-title">
-              <span class="subtitle">testimonials</span>
-              <h2 class="title">
-                Check What's My Clients
-                <br />
-                Say About Me
-              </h2>
+            <div class="section-content row">
+              <div class="col-lg-6 mb-3">
+                <div id="weather" class="card card-weather h-100">
+                  <div
+                    class="form-styled"
+                    style="
+                      transform: translate3d(0px, 0px, 0px)
+                        scale(0.9294, 0.929411);
+                      opacity: 0.7647;
+                      visibility: inherit;
+                    "
+                  >
+                    <div class="row mb-3">
+                      <div class="col-6">
+                        <div id="weather-temp" class="h1 mb-0">00°C</div>
+                        <div id="weather-desc" class="h6">Undefined</div>
+
+                        <div class="fw-bold fs-6">
+                          <span class="material-icons fs-6"> location_on </span>
+                          <span id="weather-loc">Location</span>
+                        </div>
+                        <div>
+                          <span id="temp-max">00</span>°C /
+                          <span id="temp-min">00</span>°C
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <!-- src="https://th.bing.com/th/id/R.770b805d5c99c7931366c2e84e88f251?rik=khgO%2bY1Hh3BT9w&riu=http%3a%2f%2fpurepng.com%2fpublic%2fuploads%2flarge%2fpurepng.com-weather-iconsymbolsiconsapple-iosiosios-8-iconsios-8-721522596142qx4ep.png&ehk=6msbAydV7X6D4bO8zvLC664aXwKOdBU17dwrHcKxaAg%3d&risl=&pid=ImgRaw&r=0" -->
+                        <img
+                          id="weather-img"
+                          src="https://openweathermap.org/img/wn/01d@4x.png"
+                          alt=""
+                          class="w-100 rounded-2"
+                          style="
+                            height: 120px;
+                            aspect-ratio: 9/16;
+                            object-fit: cover;
+                          "
+                        />
+                      </div>
+                    </div>
+                    <div class="row">
+                      <table class="table">
+                        <thead>
+                          <!-- <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Value</th>
+                          </tr> -->
+                        </thead>
+                        <tbody id="weather-table">
+                          <tr>
+                            <th scope="row">Temp</th>
+                            <td><span id="table-temp">00</span> °C</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Feels like</th>
+                            <td><span id="table-feels">00</span> °C</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Humidity</th>
+                            <td><span id="table-humidity">00</span> %</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Pressure</th>
+                            <td><span id="table-pressure">00</span> hPa</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Clouds</th>
+                            <td><span id="table-clouds">00</span> %</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Wind</th>
+                            <td><span id="table-wind">00</span> m/sec</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- <div class="group">
+                      <label>Message</label>
+                      <div class="control has-prefix-icon">
+                        <textarea
+                          name="message"
+                          placeholder="Write message..."
+                          required=""
+                        ></textarea
+                        ><i
+                          class="fa fa-comments prefix-icon"
+                          aria-hidden="true"
+                        ></i>
+                        <div class="errors-msgs">
+                          <input
+                            class="required"
+                            type="hidden"
+                            value="Message is required"
+                          />
+                        </div>
+                      </div>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="text-box-inline">
+                  <span class="subtitle">Weather</span>
+                  <h2 class="h2">How's The Weather?</h2>
+                  <p>
+                    to check the weather, this page has been applied third party
+                    api to check the weather from Openweather based on your
+                    location. <br /><br />
+                    to use this feature, you need to allow your browser to
+                    detect your location
+                  </p>
+
+                  <div
+                    class="btn btn-dark"
+                    id="weather-btn"
+                    @click="getLongLat"
+                  >
+                    Check the Weather 🌏
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-
-          <div class="section-content">
-            <ul class="testimonials-items" v-staggerdelay="500">
-              <li
-                class="has-ultimate-tooltip"
-                tabindex="0"
-                v-for="item in testimonialsItems"
-                :key="item.quoteAuthor.en"
-              >
-                <div class="testimonials-item">
-                  <div class="testimonial-author-img">
-                    <img
-                      :src="item.imgUrl || 'assets/images/testimonials/anonymous-user.png'"
-                      :alt="item.quoteAuthor.en"
-                    />
-                  </div>
-                  <div class="ultimate-tooltip">
-                    <p>{{ item.quoteContent.en }}</p>
-                    <h4 class="ultimate-tooltip-title">
-                      {{ item.quoteAuthor.en }}
-                    </h4>
-                    <h5 class="ultimate-tooltip-subtitle">
-                      {{ item.jobTitle.en }}
-                    </h5>
-                  </div>
-                  <div class="ultimate-tooltip-arrow"></div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div> -->
-        <!-- end of testimonials section -->
+        </div>
+        <!-- end of weather section -->
 
         <!-- start of contact section -->
         <div id="contact" class="contact-section section" tabindex="-1">

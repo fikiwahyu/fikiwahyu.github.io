@@ -1102,6 +1102,68 @@
           });
       },
 
+      getLongLat() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function (position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+            document.getElementById("weather-btn").innerHTML = "Loading...";
+
+            let url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=35957473a8d759f6036dd609d451e2a1&units=metric`;
+            const options = {
+              method: "GET",
+            };
+            fetch(url, options)
+              .then((response) => response.json())
+              .then((data) => {
+                // create the main data parameter
+                document.getElementById(
+                  "weather-img"
+                ).src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;
+                document.getElementById("weather-temp").innerHTML =
+                  data.main.temp + "°C";
+                document.getElementById("weather-desc").innerHTML =
+                  data.weather[0].description;
+                document.getElementById("weather-loc").innerHTML =
+                  data.name + "," + data.sys.country;
+                document.getElementById("temp-max").innerHTML =
+                  data.main.temp_max;
+                document.getElementById("temp-min").innerHTML =
+                  data.main.temp_min;
+                // create the table data parameter
+                document.getElementById("table-temp").innerHTML =
+                  data.main.temp;
+                document.getElementById("table-feels").innerHTML =
+                  data.main.feels_like;
+                document.getElementById("table-humidity").innerHTML =
+                  data.main.humidity;
+                document.getElementById("table-pressure").innerHTML =
+                  data.main.pressure;
+                document.getElementById("table-clouds").innerHTML =
+                  data.clouds.all;
+                document.getElementById("table-wind").innerHTML =
+                  data.wind.speed;
+                document.getElementById("weather-btn").innerHTML =
+                  "Check the Weather 🌏";
+              });
+          });
+        } else {
+          alert("Geolocation is not supported by this browser.");
+        }
+      },
+
+      getWeatherForecast(long, lat) {
+        let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=35957473a8d759f6036dd609d451e2a1&units=metric`;
+        const options = {
+          method: "GET",
+        };
+        fetch(url, options)
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+          });
+      },
+
       // initialize circle cursor
       initCircleCursor() {
         const app = this.$refs.appRef;

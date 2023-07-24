@@ -4802,6 +4802,12 @@ html[dir="rtl"]
 .contact-section .section-content .contact-form .submit-btn {
   width: 100%;
 }
+/*  9. Weather Section Style */
+/*---------------------------------*/
+.card-weather {
+  padding: 25px;
+  border-radius: 10.08px;
+}
 
 /* 2. Single Portfolio Page Styles */
 /*---------------------------------*/
